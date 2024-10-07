@@ -1,5 +1,4 @@
 # WMT2024-LRILT
-# WMT2024-LRILT
 
 ![Owner Avatar](https://github.com/pramitsahoo/WMT2024-LRILT)
 
