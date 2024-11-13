@@ -11,10 +11,8 @@ Welcome to the **WMT2024-LRILT** repository! This project contains the system de
 - [Overview](#overview)
 - [Features](#features)
 - [System Architecture](#system-architecture)
+- [Models](#models)
 - [Results](#results)
-- [How to Use](#how-to-use)
-- [Installation](#installation)
-- [Usage](#usage)
 - [Datasets](#datasets)
 - [Contributors](#contributors)
 - [License](#license)
@@ -35,6 +33,29 @@ Our approach leverages the following models:
 
 We experimented with **bilingual** and **multilingual** setups, using language grouping based on script similarity, and explored layer-freezing techniques to optimize performance.
 
+## Models
+This repository contains checkpoints for translation models trained on low-resource Indic languages as part of the WMT24 Shared Task. Below are the links to the available models for **En → Indic** and **Indic → En** directions.
+
+## En → Indic
+
+| **Language**   | **Script** | **Checkpoint Name**    | **Download Link**      |
+|-----------------|------------|------------------------|-------------------------|
+| Assamese        | Bengali    | `checkpoint_best.pt`   | [Download](https://iith-my.sharepoint.com/:u:/g/personal/ai23mtech14004_iith_ac_in/EUcFO1SHmDRCicxB_9Ld2ncBTgRHFZHIyv23um5C2c6vtg?e=XVe6yl)          |
+| Khasi           | Latin      | `checkpoint_best.pt`   | [Download](https://iith-my.sharepoint.com/:u:/g/personal/ai23mtech14004_iith_ac_in/ETB5zM6ptDhGsc5IrpFM4w0BpjBJEJCB2PwbJOZsWLT4Kw?e=WbGB5n)          |
+| Mizo            | Latin      | `checkpoint_best.pt`   | [Download](https://iith-my.sharepoint.com/:u:/g/personal/ai23mtech14004_iith_ac_in/EVfa_BvcWmVDjOPiNTsBZegBc6iTYW0l9mknUHPxVhzGGg?e=gn3Sjg)          |
+| Manipuri        | Bengali    | `checkpoint_best.pt`   | [Download](https://iith-my.sharepoint.com/:u:/g/personal/ai23mtech14004_iith_ac_in/EQzhRVE7VZxCnzTeORKiNjsBUxUCfQ5rx8P5tJkZlTdy1A?e=1uqGK0)          |
+
+## Indic → En
+
+| **Language**   | **Script** | **Checkpoint Name**    | **Download Link**      |
+|-----------------|------------|------------------------|-------------------------|
+| Assamese        | Bengali    | `checkpoint_best.pt`   | [Download](https://iith-my.sharepoint.com/:u:/g/personal/ai23mtech14004_iith_ac_in/ES2TnnjmxSZBvnmSExzLXMcBy31OE5S87jygg2K52c3tow?e=CEJKPn)          |
+| Khasi           | Latin      | `checkpoint_best.pt`   | [Download](https://iith-my.sharepoint.com/:u:/g/personal/ai23mtech14004_iith_ac_in/EZhoUBHM3aZIiAY4HDqJxIsBYbJURpprRRYqDnxn6ch6Kg?e=3jFzp8)          |
+| Mizo            | Latin      | `checkpoint_best.pt`   | [Download](https://iith-my.sharepoint.com/:u:/g/personal/ai23mtech14004_iith_ac_in/ERioM87UCkZKig0xecFgc78BtorlVaji3hiRIRzj0R0egQ?e=7iPEl6)          |
+| Manipuri        | Bengali    | `checkpoint_best.pt`   | [Download](https://iith-my.sharepoint.com/:u:/g/personal/ai23mtech14004_iith_ac_in/Eb_TtoCElpBHguybk-wZCRsBoJ6QZJWIu0e-nrJ1c-Mbpg?e=dhzW0W)          |
+
+
+
 ## Results
 
 Our system achieved the following results on the public test set:
@@ -46,35 +67,6 @@ Our system achieved the following results on the public test set:
 | English → Mizo     | 30.0      | 54.9        |
 | English → Manipuri | 35.6      | 66.3        |
 
-## How to Use
-
-### Installation
-
-To get started, clone this repository to your local machine:
-
-```bash
-git clone https://github.com/pramitsahoo/WMT2024-LRILT.git
-cd WMT2024-LRILT
-```
-
-### Usage
-
-To fine-tune the models on the provided datasets, follow these steps:
-
-1. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. Run the training script:
-   ```bash
-   python train.py --model <model_name> --data <dataset_path> --config <config_file>
-   ```
-
-3. Evaluate the model using the test set:
-   ```bash
-   python evaluate.py --model <model_name> --data <test_dataset_path>
-   ```
 
 ### Datasets
 
